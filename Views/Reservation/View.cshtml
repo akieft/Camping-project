@@ -1,0 +1,78 @@
+﻿@model CampSiteC3.Models.Reservation
+
+@{
+    ViewBag.Title = "Uw reservering";
+}
+
+<h2>Uw reservering</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Model.StartDate.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Model.EndDate.ToString("dd/MM/yyyy")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accomodation_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accomodation_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfAdults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfAdults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfKids)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfKids)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfAnimals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfAnimals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionAnimals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionAnimals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isPaid)
+        </dd>
+
+    </dl>
+</div>

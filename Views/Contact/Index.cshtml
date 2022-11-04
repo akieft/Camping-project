@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Balk title-->
+<h2 class="Title-Header">Contact</h2>
+
+<!--Header-->
+<h2 class="h2-cyan">Contact</h2>
+<p>Vragen? Neem gerust contact met ons op.</p>
+
+<!--Form contact-->
+<div class="container row">
+    <form action="/" method="post" class="col-xs-12 col-sm-8">
+        <label for="email">E-mail</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="email">
+        </div>
+        <label for="message">Bericht</label>
+        <div class="input-group">
+            <textarea type="text" class="form-control" id="message"></textarea>
+        </div>
+        <br/>
+
+    <!--Button send-->
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Verstuur" class="btn btn-cyan" />
+        </div>
+    </div>
+    </form>
+    
+    <!--Info contact -->
+    <div class="panel panel-default col-xs-12 col-sm-4">
+        <div class="panel-heading">
+            <h2 class="panel-title h2-cyan">Contactgegevens</h2>
+        </div>
+        <div class="panel-body">
+            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            Adresgegevens.
+            <br />
+
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            Email
+            <br />
+
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+            Telefoonnummer
+
+        </div>
+    </div>
+</div>
+

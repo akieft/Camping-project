@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CampSiteC3.Models.ActivitiesSchedule>
+
+@{
+    ViewBag.Title = "AdminActivities";
+}
+
+<!-- Header and info-->
+<h2 class="Activities-h2 h2-space">Activiteiten rooster</h2>
+<br />
+<p class="p-schedule">Maak/wijzig/delete hieronder de activiteiten rooster</p>
+<br />
+
+<!--Button for Create -->
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-cyan" })
+</p>
+<br />
+
+<!--Foreach loop the data and display in a panel-->
+@foreach (var item in Model)
+{
+    <div class="panel panel-border">
+        <div class="panel-heading panel-background ">
+            <h2 class="titlecard cardtitle">@Html.DisplayFor(modelItem => item.Activity)</h2>
+        </div>
+        <div class="panel-body">
+            <h4 class="cardtitle Activities-h4 ">Datum</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.Day) @Html.DisplayFor(modelItem => item.Date)</p>
+            <h4 class="cardtitle Activities-h4 ">Tijd</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.HourFrom) tot @Html.DisplayFor(modelItem => item.HourTo)</p>
+            <h4 class="cardtitle Activities-h4 ">Locatie</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.Location)</p>
+
+            <!--Button for edit details and delete-->
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-cyan" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-cyan" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-cyan" })
+            </p>
+        </div>
+    </div>
+}
+

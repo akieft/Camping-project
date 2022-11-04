@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CampSiteC3.Models.ActivitiesSchedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Container with content info and image-->
+<div class="container-info row">
+
+    <!--Info-->
+    <div class="info-block col-md-4 ">
+        <h2 class="Activities-h2">Activiteiten</h2>
+        <p>
+            Van begeleide wandelingen tot gezellige quizavonden.
+            Je hoeft je geen moment te vervelen! Camping Anne neemt geen genoegen met de veelgehoorde uitspraak
+            ‘als de kinderen tevreden zijn, zijn wij het ook’. Voor volwassenen (met of zonder kinderen) organiseren wij ook hele leuke activiteiten die bijzonder gewaardeerd worden.
+        </p>
+        <p>
+            Alles is afhankelijk van het weer en er moet gereserveerd worden.
+            Geef uw naam en telefoonnummer door aan de receptie of bij de Restaurant.
+            Wij danken u hiervoor hartelijk namens het hele team van Camping Anne.
+            Een groot voordeel is dat wij ook weten hoeveel mensen er deelnemen zodat we ook op personele
+            vlak hierop juist kunnen inzetten.
+            Wij wensen u een hele fijne vakantie op camping Anne.
+
+        </p>
+    </div>
+
+    <!--Image-->
+    <div class="bingoImg col-md-6">
+        <img src="~/Img/bingo.jpg" width="350px 600px">
+    </div>
+</div>
+
+<!-- Header -->
+<h2 class="Activities-h2">Activiteiten rooster</h2>
+<br />
+
+<!--Foreach loop the data and display in a panel-->
+@foreach (var item in Model)
+{
+    <div class="panel panel-border">
+        <div class="panel-heading panel-background ">
+            <h2 class="titlecard cardtitle">@Html.DisplayFor(modelItem => item.Activity)</h2>
+        </div>
+        <div class="panel-body">
+            <h4 class="cardtitle Activities-h4 ">Datum</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.Day) @Html.DisplayFor(modelItem => item.Date)</p>
+            <h4 class="cardtitle Activities-h4 ">Tijd</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.HourFrom) tot @Html.DisplayFor(modelItem => item.HourTo)</p>
+            <h4 class="cardtitle Activities-h4 ">Locatie</h4>
+            <p class="p-panel">@Html.DisplayFor(modelItem => item.Location)</p>
+        </div>
+    </div>
+}

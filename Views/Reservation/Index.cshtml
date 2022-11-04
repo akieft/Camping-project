@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Agenda";
+
+}
+@section SPAViews
+{
+    @Html.Partial("_Reservation")
+    @Html.Partial("_Agenda")
+}
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var events = [];
+            $.ajax({
+                type: "GET",
+                url: "/Reservation/GetReservations",
+                success: function (data) {
+                    console.log(data.responseText);
+                    $.each(data,
+                        function (i, v) {
+                            events.push({
+                                title: " Beschikbaar",
+                                description: " U kunt deze dag komen kamperen",
+                                start: moment(v.StartDate),
+                                allDay: true
+                            });
+                        });
+
+                    GenerateCalender(events);
+                },
+                error: function (error) {
+                    alert('Onbekende fout, probeer het later opnieuw');
+                }
+            });
+
+            function GenerateCalender(events) {
+                $('#calender').fullCalendar('destroy');
+                $('#calender').fullCalendar({
+                    contentHeight: 400,
+                    defaultDate: new Date(),
+                    timeFormat: 'h(:mm)a',
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,basicWeek'
+                    },
+                    eventLimit: true,
+                    eventColor: '#378006',
+                    events: events,
+                    eventClick: function(calEvent, jsEvent, view) {
+                        $('#myModal #eventTitle').text(calEvent.title);
+                        var $description = $('<div/>');
+                        $description.append($('<p/>').html('<b>Start: </b>' + calEvent.start.format("DD-MMM-YYYY")));
+
+                        $description.append($('<p/>').html('<b>Beschrijving:</b>' + calEvent.description));
+                        $('#myModal #pDetails').empty().html($description);
+
+
+                        $('#myModal').modal();
+                    }
+                });
+            }
+
+            var buttons = document.getElementsByTagName("button");
+            console.log(buttons);
+        });
+
+    </script>
+}

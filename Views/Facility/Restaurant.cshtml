@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Restaurant";
+}
+
+<!--Second navbar-->
+<nav class="navbar navbar-expand-md bg-dark" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">@Html.ActionLink("Faciliteiten", "Index", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Zwembad", "swimmingPool", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Wasserette", "laundryService", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Sanitair", "Sanitary", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Fietsverhuur", "BicycleRental", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Camping Winkel", "CampingShop", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Speeltuin", "Playground", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Restaurant / Bar / Terras", "Restaurant", "Facility", new { @class = "facility-nav" })</li>
+        </ul>
+    </div>
+</nav>
+
+<!--Container with content info and image-->
+<div class="container-info row">
+
+    <!--Info-->
+    <div class="info-block col-md-4 ">
+        <h2 class="facility-h2">Restaurant / bar met terras</h2>
+        <br />
+        <p>
+            Het adres om lekker te genieten van wat het bourgondische Texel te bieden heeft.
+            U kunt hier terecht voor een uitgebreide lunch, een heerlijk diner, een gezellige borrel of voor een lekker stuk taart met koffie.
+        </p>
+        <p>
+            Voor de kleintjes is er, dichtbij het panoramaterras, een grote speeltuin met diverse speeltoestellen aanwezig en hebben zij diverse boevengerechtjes op de kaart voor de rakkers.
+        </p>
+
+
+    </div>
+
+    <!--Image-->
+    <div class="playgroundImg col-md-4">
+        <img src="~/Img/speeltuin.jpg" width="350px 600px">
+    </div>
+</div>
+

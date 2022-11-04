@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "CampingShop";
+}
+
+<!--Second navbar-->
+<nav class="navbar navbar-expand-md bg-dark" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">@Html.ActionLink("Faciliteiten", "Index", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Zwembad", "swimmingPool", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Wasserette", "laundryService", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Sanitair", "Sanitary", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Fietsverhuur", "BicycleRental", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Camping Winkel", "CampingShop", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Speeltuin", "Playground", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Restaurant / Bar / Terras", "Restaurant", "Facility", new { @class = "facility-nav" })</li>
+        </ul>
+    </div>
+</nav>
+<!--Container with content info and image-->
+<div class="container-info row">
+
+    <!--Info-->
+    <div class="info-block col-md-4 ">
+        <h2 class="facility-h2">Camping winkel</h2>
+        <br />
+
+        <p>
+            Voor uw snelle boodschap kunt u terrecht bij de camping winkel.
+
+            Via de bestellijst kunt u dagelijks verse broodjes bestellen.
+            De bestellijst dient uiterlijk één dag van te voren tot 19:00 uur bij het restaurant zijn ingeleverd en afgerekend.
+            Vanaf 09:00 uur kunt u de broodjes afhalen in de Winkel.
+        </p>
+
+    </div>
+
+    <!--Image-->
+    <div class="bicycleImg col-md-4">
+        <img src="~/Img/shop2.jpg" width="350px 600px">
+    </div>
+</div>

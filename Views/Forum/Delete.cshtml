@@ -1,0 +1,50 @@
+﻿@model CampSiteC3.Models.ForumModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+<!--Balk title-->
+<h2 class="Title-Header">Delete Review</h2>
+
+<h2 class="h2-cyan">Delete</h2>
+
+<h4 class="text-danger">Are you sure you want to delete this?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Camping)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Camping)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssueDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-cyan" /> |
+            @Html.ActionLink("Back to review", "Index", "", new {@class ="btn btn-cyan"})
+        </div>
+    }
+</div>

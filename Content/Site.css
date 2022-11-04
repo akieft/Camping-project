@@ -1,0 +1,248 @@
+﻿
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+/*Facility index page css / overal */
+
+.info-block {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    font-size: 18px;
+}
+
+.facility-h2 {
+    color: #00bcd4; 
+}
+
+.facility-h4 {
+    color: #00bcd4;
+}
+
+.facilityImg {
+    width: 150px;
+    margin-top: 180px;
+    margin-left: 80px;
+}
+
+/*SwimmingPool page css*/
+
+.swimImg {
+    width: 150px;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.swimmingHeader {
+    color: #AAA;
+    font-size: 40px;
+    font-weight: lighter;
+    background-image: url('../Img/facilityMainPic.jpg');
+    background-repeat: no-repeat;
+    background-size: 1800px 400px;
+}
+/*laundryService page css*/
+
+.laundryImg {
+    width: 150px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    margin-left: 80px;
+}
+.laundryHeader {
+    color: #AAA;
+    font-size: 40px;
+    font-weight: lighter;
+    background-image: url('../Img/laundry.jpg');
+    background-repeat: no-repeat;
+    background-size: 1500px 400px;
+}
+
+/*sanitary page css*/
+
+
+.sanitaryImg {
+    width: 150px;
+    margin-top: 120px;
+    margin-left: 80px;
+
+}
+
+/*Bicycle Rental page css*/
+
+.bicycleImg {
+    width: 150px;
+    margin-top: 120px;
+    margin-left: 80px;
+}
+
+
+/*Camping shop page css*/
+
+
+.playgroundImg {
+    width: 150px;
+    margin-top: 120px;
+    margin-left: 80px;
+}
+
+
+
+
+/*Overall css*/
+
+.login-register-btn {
+
+    color: #00bcd4;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+.login-register-btn:hover {
+    color: #ffffff;
+}
+
+
+.btn-cyan {
+    background-color: #00bcd4;
+    color: white;
+}
+.h1-cyan {
+    color: #00bcd4;
+    font-family: Brush Script MT;
+    text-align: center;
+}
+
+.h3-cyan {
+    color: #00bcd4;
+}
+
+.h2-cyan {
+    color: #00bcd4;
+}
+
+.h4-cyan {
+    color: #00bcd4;
+}
+
+.facility-nav {
+    padding: 20px;
+    color: #ffffff;
+}
+
+    .facility-nav li {
+        color: #ffffff;
+    }
+   
+
+.facility-nav:hover {
+    color: #00bcd4;
+}
+
+.Title-Header {
+    color: #ffffff;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-margin {
+    margin-top: 120px;
+}
+
+.btn-padding-top {
+    padding-top: 30px;
+}
+
+/*Activities schedule cs */
+.Activities-h2 {
+    color: #00bcd4;
+}
+
+.Activities-h4 {
+    color: #00bcd4;
+}
+
+.info-block-activities  {
+    margin-top: 50px;
+   /* margin-bottom: 50px;
+    margin-left: 150px;*/
+    font-size: 18px;
+}
+
+.bingoImg {
+    width: 150px;
+    margin-top: 200px;
+    margin-left: 80px;
+}
+
+.panel-border {
+    border: #00bcd4;
+    border-style: solid;
+}
+.panel-background {
+    background-color: #00bcd4;
+    
+}
+.titlecard {
+    color: white;
+    margin-top: 20px;
+}
+.poardbig {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+.cardtitle {
+    margin: 0;
+}
+
+p.p-panel {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.btn-cyan {
+    background-color: #00bcd4;
+    color: white;
+}
+
+/*Css voor admin animatie chedule  / activities schedule*/
+.h2-space {
+    padding-top: 60px;
+}
+
+.p-schedule {
+    font-size: 18px;
+}

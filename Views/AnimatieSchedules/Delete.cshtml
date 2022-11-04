@@ -1,0 +1,88 @@
+﻿@model CampSiteC3.Models.AnimatieSchedule
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<!--Header-->
+<h2 class="Activities-h2">Delete animatie activiteit</h2>
+
+<!--Show the data you want to delete-->
+<div>
+    <p>Verwijder de animatie activiteit door op delete button te klikken.</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Activity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <!--Delete and home button-->
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-cyan" /> |
+            @Html.ActionLink("Home", "AdminAnimatie", null, new{ @class = "btn btn-cyan"})
+        </div>
+    }
+</div>

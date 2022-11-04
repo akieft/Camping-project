@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Wasserette";
+}
+
+<!--Second navbar-->
+<nav class="navbar navbar-expand-md bg-dark" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">@Html.ActionLink("Faciliteiten", "Index", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Zwembad", "swimmingPool", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Wasserette", "laundryService", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Sanitair", "Sanitary", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Fietsverhuur", "BicycleRental", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Camping Winkel", "CampingShop", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Speeltuin", "Playground", "Facility", new { @class = "facility-nav" })</li>
+            <li class="nav-item">@Html.ActionLink("Restaurant / Bar / Terras", "Restaurant", "Facility", new { @class = "facility-nav" })</li>
+        </ul>
+    </div>
+</nav>
+
+<!--Container with content info and image-->
+<div class="container-info row">
+
+    <!--Info-->
+    <div class="info-block col-md-4 ">
+        <h2 class="facility-h2">Wasserette</h2>
+        <br />
+
+        <p>
+            Helaas gaat het wassen van kleding op vakantie ook gewoon door. Daarom is het extra fijn dat wij u hiervoor de
+            mogelijkheid bieden. Wasmachine- en drogermunten zijn verkrijgbaar bij de receptie. Wasmiddel is inbegrepen.
+        </p>
+    </div>
+
+    <!--Image-->
+    <div class="laundryImg col-md-4">
+        <img src="~/Img/Wasserette.jpg" width="350px 600px">
+    </div>
+</div>

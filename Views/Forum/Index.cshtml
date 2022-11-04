@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CampSiteC3.Models.ForumModels>
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Balk title-->
+<h2 class="Title-Header">Gastenboek</h2>
+<h2 class="h2-cyan">Reviews</h2>
+
+@if (Request.IsAuthenticated)
+{
+    <p class="btn-padding-top">
+        @Html.ActionLink("Create New", "Create", "", new { @class = "btn btn-cyan " })
+    </p>
+
+    foreach (var item in Model)
+    {
+        <div class="row" style="margin: 30px">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Camping plaats: @Html.DisplayFor(modelItem => item.Camping) </h5>
+                        <p> @Html.DisplayFor(modelItem => item.IssueDate)</p>
+                        <p class="card-text">
+                            @Html.DisplayFor(modelItem => item.Review)
+                        </p>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Campsite }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Campsite })
+                        </td>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+    }
+}
+
+@if (!Request.IsAuthenticated)
+{
+    foreach (var item in Model)
+    {
+        <div class="row" style="margin: 30px">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Camping plaats: @Html.DisplayFor(modelItem => item.Camping) </h5>
+                        <p> @Html.DisplayFor(modelItem => item.IssueDate)</p>
+                        <p class="card-text">
+                            @Html.DisplayFor(modelItem => item.Review)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CampSiteC3.Models.Reservation>
+
+@{
+    ViewBag.Title = "Reservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mijn reserveringen</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfAdults)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.StartDate.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @item.EndDate.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfAdults)
+                </td>
+                <td>
+                    @Html.ActionLink("Wijzigen", "Edit", new {id = item.Id}) |
+                    @Html.ActionLink("Bekijk boeking", "View", new {id = item.Id}) |
+                    @Html.ActionLink("Annuleer", "Delete", new {id = item.Id})
+                </td>
+            </tr>
+        }
+    }
+
+</table>

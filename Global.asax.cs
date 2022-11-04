@@ -1,0 +1,25 @@
+﻿using System.Web;
+using System.Web.Http;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
+using CampSiteC3.Models;
+
+namespace CampSiteC3
+{
+    public class MvcApplication : HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //call seed method
+            ApplicationDbContext context = new ApplicationDbContext();
+            SeedRolesAndUsers.Seed(context);
+        }
+        
+    }
+}
